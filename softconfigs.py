@@ -1,5 +1,7 @@
 #Red team config fixer
 import os
+#dodatupdate
+
 
 #filechecks
 sshTrue = os.path.isfile("/etc/ssh/sshd_config")
