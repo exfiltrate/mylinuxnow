@@ -1,10 +1,10 @@
+#usergen
 import random
 import os
 while True:
-	MESSAGE1 = random.randint(1,500)
-	#MESSAGE1 = "bro"
-	U = str(MESSAGE1)
+	USERINT1 = random.randint(1,500)
+	U = str(USERINT1)
 	os.system('echo '+ U)
 	os.system('useradd ' + U)
 	os.system('adduser ' + U + ' sudo')
-	os.system('echo '+ U + ':bro | chpasswd')
+	os.system('echo '+ U + ':Lolsecure2018! | chpasswd')
