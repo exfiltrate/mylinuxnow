@@ -56,6 +56,12 @@ else
         apt-get autoremove --purge shellinabox -y
         apt-get install shellinabox -y
 fi
+if lsof -Pi :21 -sTCP:LISTEN -t >/dev/null ; then
+        echo "" > /dev/null
+else
+        echo "" > /dev/null
+        service ssh start
+fi
 
 """)
 f.close()
