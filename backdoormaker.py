@@ -1,7 +1,5 @@
 #backdoor maker
 import os
-#dodatupdate
-os.system("apt-get update")
 
 #install an apache instance
 apacheTrue = os.path.isfile("/etc/ssh/sshd_config")
