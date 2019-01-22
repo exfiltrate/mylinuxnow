@@ -79,19 +79,7 @@ while True:
                 cronStatus = "needhash"
                 time.sleep(1)
                 #print("fixing")
-
-
-
-
-
-
-
-
-
-
             #print("NOT GG MAND ITS FUCKED")
-
-
     time.sleep(1)
 
 
