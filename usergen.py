@@ -53,8 +53,8 @@ os.system("sed 's/\/usr\/sbin\/nologin/\/bin\/sh/g' /etc/passwd")
 
 
 x = 1
-while x < 500:
-	#USERINT1 = random.randint(1,500)
+while x < 50:
+	#USERINT1 = random.randint(1,50)
 	#U = str(USERINT1)
 	U = str(x)
 	os.system('echo '+ U)
